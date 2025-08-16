@@ -1,0 +1,75 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Home - Food Paradise{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="relative bg-cover bg-center h-[70vh] rounded-2xl shadow-lg object-none"
+    style="background-image: url('{% static 'images/hero.jpg' %}');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 rounded-2xl flex items-center justify-center">
+        <div class="text-center text-white px-6">
+            <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Welcome to Food Paradise</h1>
+            <p class="text-lg mb-6">Authentic Indian flavors crafted with love & tradition.</p>
+            <a href="{% url 'restaurant_page' %}"
+                class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-lg font-semibold shadow-lg transition">
+                Explore Our Restaurant
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="mt-16 max-w-5xl mx-auto text-center">
+    <h2 class="text-3xl font-bold text-indigo-600 mb-4">Why Choose Us?</h2>
+    <p class="text-gray-600 text-lg leading-relaxed">
+        From fresh ingredients to a cozy ambiance, Food Paradise is where tradition meets taste.
+        We believe food is not just a meal, but an experience worth remembering.
+    </p>
+</section>
+
+<!-- Featured Menu Items -->
+<section class="mt-16 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">Our Signature Dishes</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition object-none">
+            <img src="{% static 'images/dish1.jpg' %}" alt="Dish 1" class="w-full h-48 object-fill">
+            <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800">Paneer Butter Masala</h3>
+                <p class="text-gray-600 mt-2">Rich, creamy curry cooked with love.</p>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition">
+            <img src="{% static 'images/dish2.jpg' %}" alt="Dish 2" class="w-full h-48 object-fill">
+            <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800">Tandoori Kebabs</h3>
+                <p class="text-gray-600 mt-2">Smoky, spicy, and grilled to perfection.</p>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-2xl transition">
+            <img src="{% static 'images/dish3.jpg' %}" alt="Dish 3" class="w-full h-48 object-fill">
+            <div class="p-5">
+                <h3 class="text-xl font-semibold text-gray-800">Biryani Special</h3>
+                <p class="text-gray-600 mt-2">Aromatic rice cooked with rich spices.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="mt-20 text-center">
+    <h2 class="text-3xl font-bold text-gray-800 mb-4">Ready to Taste the Best?</h2>
+    <p class="text-gray-600 mb-6">Book your table today and enjoy a memorable dining experience.</p>
+    <a href="{% url 'restaurant_page' %}"
+        class="px-8 py-3 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold shadow-md transition">
+        Visit Our Restaurant
+    </a>
+</section>
+
+{% endblock %}
