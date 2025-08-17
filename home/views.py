@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from django.conf import settings
 
 # Create your views here.
 def home(request):
-    return render(request, 'home.html')
+    context = {
+        'restaurant_name': settings.RESTAURANT_NAME,
+    }
+    return render(request, 'home.html', context)
 
 def restaurant_page(request):
-    return render(request, 'restaurant.html', context)
+    return render(request, 'restaurant.html')

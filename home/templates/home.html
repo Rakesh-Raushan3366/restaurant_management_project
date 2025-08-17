@@ -1,5 +1,5 @@
 {% extends "base.html" %}{% load static %}
-{% block title %}Home - Food Paradise{% endblock %}
+{% block title %}Home - {{ restaurant_name }}{% endblock %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
     style="background-image: url('{% static 'images/hero.jpg' %}');">
     <div class="absolute inset-0 bg-black bg-opacity-50 rounded-2xl flex items-center justify-center">
         <div class="text-center text-white px-6">
-            <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Welcome to Food Paradise</h1>
+            <h1 class="text-5xl font-extrabold mb-4 drop-shadow-lg">Welcome to {{ restaurant_name }}</h1>
             <p class="text-lg mb-6">Authentic Indian flavors crafted with love & tradition.</p>
             <a href="{% url 'restaurant_page' %}"
                 class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 rounded-lg text-lg font-semibold shadow-lg transition">
